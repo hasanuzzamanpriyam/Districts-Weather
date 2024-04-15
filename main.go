@@ -114,8 +114,10 @@ func main() {
 		log.Fatalf("Error parsing districts JSON: %v", err)
 	}
 
-	// Example: Search for districts by division name
-	divisionName := "dhaka" // Replace with the division name you want to search for
+	// Example: Search for districts by division name as per input
+	fmt.Printf("Enter division name: ")
+	var divisionName string
+	fmt.Scanln(&divisionName)
 	divisionDistricts := searchDistrictsByDivision(divisionName, divisions, districts)
 
 	// Print out the districts found
